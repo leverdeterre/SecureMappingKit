@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "guid": "14754930-7d36-4eba-88a9-5c77605f350c",
+        "isActive": "false",
+        "balance": 2633.59,
+        "picture": "http://placehold.it/32x32",
+        "age": 31,
+        "name": "Bianca Faulkner",
+        "gender": "female",
+        "company": "ZOLARITY",
+        "email": "biancafaulkner@zolarity.com",
+        "phone": "+1 (914) 471-2632"
+    }
+]

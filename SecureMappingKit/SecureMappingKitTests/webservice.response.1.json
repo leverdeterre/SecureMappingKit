@@ -1,0 +1,15 @@
+[
+    {
+        "id": "0",
+        "guid": "1358d4c2-ab79-428f-b2a2-07fadc3b6a7a",
+        "isActive": false,
+        "balance": 1508.63,
+        "picture": "http://placehold.it/32x32",
+        "age": 36,
+        "name": "Walls Johnson",
+        "gender": "male",
+        "company": "MAZUDA",
+        "email": "wallsjohnson@mazuda.com",
+        "phone": "+1 (833) 472-2926"
+    }
+]

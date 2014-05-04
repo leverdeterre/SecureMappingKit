@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>53AA01FD-E278-43F8-9B53-49D83CDFA769</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SecureMappingKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9156FC1E-2DCE-4F32-B0B7-5D3016397C61</key>
+		<string>https://github.com/leverdeterre/SecureMappingKit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SecureMappingKit/SecureMappingKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9156FC1E-2DCE-4F32-B0B7-5D3016397C61</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/leverdeterre/SecureMappingKit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9156FC1E-2DCE-4F32-B0B7-5D3016397C61</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9156FC1E-2DCE-4F32-B0B7-5D3016397C61</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SecureMappingKit</string>
+		</dict>
+	</array>
+</dict>
+</plist>
