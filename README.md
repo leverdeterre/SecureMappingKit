@@ -9,7 +9,7 @@ Actual tranformers :
 - [x] NSStringTransformer,
 - [x] NSURLTransformer,
 - [x] NSArrayTransformer,
-- [] NSDateTransformer
+- [ ] NSDateTransformer
 
 #How To
 
