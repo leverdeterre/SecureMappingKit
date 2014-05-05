@@ -14,6 +14,9 @@
 #import "NSBooleanNumberTransformer.h"
 #import "NSArrayTransformer.h"
 #import "NSURLTransformer.h"
+#import "NSDecimalNumberTransformer.h"
+#import "NSDecimalNumberTransformerWithDecimalSeparatorComa.h"
+#import "NSDecimalNumberTransformerWithDecimalSeparatorPoint.h"
 
 typedef id (^JMOTransformerBlock)(id value);
 

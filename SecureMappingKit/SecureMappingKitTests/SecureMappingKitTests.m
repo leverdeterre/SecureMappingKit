@@ -28,7 +28,7 @@
     [super tearDown];
 }
 
-
+/*
 - (void)test1
 {
     NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"webservice.response.1"
@@ -66,37 +66,40 @@
     XCTAssertEqualWithAccuracy(person.balance, 2633.59,0.001, @"Should have matched");
 }
 
-- (void)test3
+*/
+- (void)testBoolValueTransformer
 {
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"webservice.response.3"
-                                                         ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:jsonPath];
-    NSError *error = nil;
-    id json = [NSJSONSerialization JSONObjectWithData:data
-                                              options:kNilOptions
-                                                error:&error];
+    NSMutableDictionary *dict = [NSMutableDictionary new];
+    [dict setObject:@"false" forKey:@"isActiveString"];
+    [dict setObject:@"1" forKey:@"isActiveStringV2"];
+    [dict setObject:@(NO) forKey:@"isActiveNumber"];
     
-    NSDictionary *dict = [json firstObject];
-    JMOnePerson *person = [JMOnePerson new];
-    [person setupWithDictionary:dict];
+    id bValue = [dict objectForKey:@"isActiveString" expectedClass:[NSNumber class] withTransformerClass:NSBooleanNumberTransformer.class];
+    XCTAssertEqual(bValue, @(NO), @"Should have matched");
     
-    XCTAssertEqualObjects(person.identifier, @"2", @"Should have matched");
-    XCTAssertEqual(person.isActive, YES, @"Should have matched");
-    XCTAssertEqualWithAccuracy(person.balance, 2946.54,0.001, @"Should have matched");
+    bValue = [dict objectForKey:@"isActiveStringV2" expectedClass:[NSNumber class] withTransformerClass:NSBooleanNumberTransformer.class];
+    XCTAssertEqual([bValue boolValue], [@(YES) boolValue], @"Should have matched");
+    
+    bValue = [dict objectForKey:@"isActiveNumber" expectedClass:[NSNumber class] withTransformerClass:NSBooleanNumberTransformer.class];
+    XCTAssertEqual(bValue, @(NO), @"Should have matched");
 }
 
-- (void)testCustomValues
+- (void)testNumberValueTransformers
 {
     NSMutableDictionary *dict = [NSMutableDictionary new];
     [dict setObject:@"12345" forKey:@"id"];
-    [dict setObject:@"toto" forKey:@"name"];
+
+    id identifier = [dict objectForKey:@"id" expectedClass:[NSNumber class]];
+    XCTAssertEqualObjects(identifier, @(12345), @"Should have matched");
+}
+
+- (void)testURLValueTransformers
+{
+    NSMutableDictionary *dict = [NSMutableDictionary new];
     [dict setObject:@"http://www.google.fr" forKey:@"url"];
     
     id url = [dict objectForKey:@"url" expectedClass:[NSURL class]];
     XCTAssertEqualObjects(url, [NSURL URLWithString:@"http://www.google.fr"], @"Should have matched");
-    
-    id identifier = [dict objectForKey:@"id" expectedClass:[NSNumber class]];
-    XCTAssertEqualObjects(identifier, @(12345), @"Should have matched");
     
     id transformedValue = [dict objectForKey:@"url" withTransformerBlock:^id(id value) {
         if ([value isKindOfClass:[NSURL class]]) {
@@ -109,4 +112,42 @@
     }];
     XCTAssertEqualObjects(transformedValue, [NSURL URLWithString:@"http://www.google.fr"], @"Should have matched");
 }
+
+- (void)testDecimalValueTransformers
+{
+    NSString *decimalWithPoint = @"1800.98";
+    NSString *decimalWithComa = @"1800,98";
+    NSNumber *number = @(1800.98f);
+    NSDecimalNumber *d = [[NSDecimalNumber alloc] initWithDecimal:[@(1800.98f) decimalValue]];
+
+    /**
+     *  Validate NSDecimalNumberTransformerWithDecimalSeparatorPoint
+     */
+    NSDictionary *testDict = @{@"balance": decimalWithPoint};
+    id result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformerWithDecimalSeparatorPoint.class];
+    XCTAssertEqualObjects(result,d, @"Should have matched");
+
+    /**
+     *  Validate NSDecimalNumberTransformerWithDecimalSeparatorComa
+     */
+    testDict = @{@"balance": decimalWithComa};
+    result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformerWithDecimalSeparatorComa.class];
+    XCTAssertEqualObjects(result,d, @"Should have matched");
+
+    /**
+     *  Validate NSDecimalNumberTransformer
+     */
+    testDict = @{@"balance": number};
+    result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformer.class];
+    XCTAssertEqualObjects(result,d, @"Should have matched");
+    
+    testDict = @{@"balance": decimalWithComa};
+    result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformer.class];
+    XCTAssertEqualObjects(result,d, @"Should have matched");
+    
+    testDict = @{@"balance": decimalWithPoint};
+    result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformer.class];
+    XCTAssertEqualObjects(result,d, @"Should have matched");
+}
+
 @end

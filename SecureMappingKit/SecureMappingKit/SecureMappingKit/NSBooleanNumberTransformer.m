@@ -28,8 +28,8 @@
         }
     }
     
-    if ([value respondsToSelector:@selector(floatValue)]) {
-        return [NSNumber numberWithFloat:[value floatValue]];
+    if ([value respondsToSelector:@selector(intValue)]) {
+        return [NSNumber numberWithBool:(1 == [value intValue])];
     }
     
     return nil;

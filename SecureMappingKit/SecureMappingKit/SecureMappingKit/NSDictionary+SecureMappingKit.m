@@ -22,6 +22,8 @@
         transformerClass = NSArrayTransformer.class;
     } else if (expectedClass == NSURL.class) {
         transformerClass = NSURLTransformer.class;
+    }  else if (expectedClass == NSDecimalNumber.class) {
+        transformerClass = NSDecimalNumberTransformer.class;
     } else {
         transformerClass = NSValueTransformer.class;
     }

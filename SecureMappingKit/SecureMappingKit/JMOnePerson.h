@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *guid;
 @property (assign, nonatomic) BOOL isActive;
 @property (assign, nonatomic) float balance;
+@property (strong, nonatomic) NSDecimalNumber* balanceDecimalNumber;
 
 - (void)setupWithDictionary:(NSDictionary *)dict;
 
