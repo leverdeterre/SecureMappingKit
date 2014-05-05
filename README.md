@@ -11,8 +11,7 @@ Actual tranformers :
 - [x] NSURLTransformer,
 - [x] NSArrayTransformer,
 - [ ] NSDateTransformer,
-- [ ] NSDecimalTransformer
-
+- [x] NSDecimalTransformer
 
 #How To
 
