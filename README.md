@@ -10,7 +10,9 @@ Actual tranformers :
 - [x] NSStringTransformer,
 - [x] NSURLTransformer,
 - [x] NSArrayTransformer,
-- [ ] NSDateTransformer
+- [ ] NSDateTransformer,
+- [ ] NSDecimalTransformer
+
 
 #How To
 
@@ -20,8 +22,8 @@ If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `p
 
 ##Using SecureMappingKit
 
-1. Import the file `#import "NSDictionary+SecureMappingKit.h"`
-2. Call the new ojectForKey methods
+Call the new ojectForKey: methods
+
 ```objective-c
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass;
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass withTransformerClass:(Class)transformerClass;
