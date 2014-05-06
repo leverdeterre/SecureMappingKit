@@ -11,5 +11,6 @@
 @interface NSValueTransformer (SecureMappingKit)
 
 + (instancetype)transformerForClass:(Class)transformerClass;
++ (instancetype)transformerForClass:(Class)transformerClass withDateFormat:(NSString *)dateFormat;
 
 @end

@@ -41,6 +41,7 @@
 		C2C38354191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38352191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m */; };
 		C2C38357191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */; };
 		C2C38358191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */; };
+		C2C383611918B7C3009FEDFA /* NSDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C383601918B7C3009FEDFA /* NSDateTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		C2C38352191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDecimalNumberTransformerWithDecimalSeparatorComa.m; sourceTree = "<group>"; };
 		C2C38355191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberTransformerWithDecimalSeparatorPoint.h; sourceTree = "<group>"; };
 		C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDecimalNumberTransformerWithDecimalSeparatorPoint.m; sourceTree = "<group>"; };
+		C2C3835F1918B7C3009FEDFA /* NSDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateTransformer.h; sourceTree = "<group>"; };
+		C2C383601918B7C3009FEDFA /* NSDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,8 @@
 				C2C3832C1916BFAF009FEDFA /* NSArrayTransformer.m */,
 				C2C3834D191834CE009FEDFA /* NSDecimalNumberTransformer.h */,
 				C2C3834E191834CE009FEDFA /* NSDecimalNumberTransformer.m */,
+				C2C3835F1918B7C3009FEDFA /* NSDateTransformer.h */,
+				C2C383601918B7C3009FEDFA /* NSDateTransformer.m */,
 				C2C38351191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.h */,
 				C2C38352191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m */,
 				C2C38355191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.h */,
@@ -346,6 +351,7 @@
 				C2C3833A1916BFAF009FEDFA /* NSBooleanNumberTransformer.m in Sources */,
 				C2C38353191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m in Sources */,
 				C2C38357191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m in Sources */,
+				C2C383611918B7C3009FEDFA /* NSDateTransformer.m in Sources */,
 				C2C3833B1916BFAF009FEDFA /* NSDictionary+SecureMappingKit.m in Sources */,
 				C2C3833C1916BFAF009FEDFA /* NSNumberTransformer.m in Sources */,
 				C2C3833F1916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m in Sources */,
@@ -564,6 +570,7 @@
 				C2C383261916BF5B009FEDFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2C383271916BF5B009FEDFA /* Build configuration list for PBXNativeTarget "SecureMappingKitTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +579,7 @@
 				C2C383291916BF5B009FEDFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

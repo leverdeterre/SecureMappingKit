@@ -17,6 +17,7 @@
 #import "NSDecimalNumberTransformer.h"
 #import "NSDecimalNumberTransformerWithDecimalSeparatorComa.h"
 #import "NSDecimalNumberTransformerWithDecimalSeparatorPoint.h"
+#import "NSDateTransformer.h"
 
 typedef id (^JMOTransformerBlock)(id value);
 
@@ -53,5 +54,7 @@ typedef id (^JMOTransformerBlock)(id value);
  *  @return id
  */
 - (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock;
+
+- (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat;
 
 @end

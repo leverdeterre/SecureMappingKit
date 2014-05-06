@@ -53,5 +53,19 @@
     return transformerBlock([self objectForKey:aKey]);
 }
 
+- (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat
+{
+    id obj = [self objectForKey:aKey];
+    if (aKey == nil) {
+        NSAssert(aKey==nil, @"aKey can't be nil");
+        return nil;
+    }
+    
+    Class transformerClass = NSDateTransformer.class;
+    NSValueTransformer *transformer = [NSValueTransformer transformerForClass:transformerClass
+                                                               withDateFormat:dateFromat];
+    return [transformer transformedValue:obj];
+}
+
 
 @end
