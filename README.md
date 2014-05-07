@@ -10,7 +10,7 @@ Actual tranformers :
 - [x] NSStringTransformer,
 - [x] NSURLTransformer,
 - [x] NSArrayTransformer,
-- [ ] NSDateTransformer,
+- [x] NSDateTransformer,
 - [x] NSDecimalTransformer
 
 #How To
@@ -27,19 +27,26 @@ Call the new ojectForKey: methods
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass;
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass withTransformerClass:(Class)transformerClass;
 - (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock;
+
+- (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat;
 ```
 
 Example : 
 ```objective-c
 - (void)setupWithDictionary:(NSDictionary *)dict
 {
-    self.identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
+    NSString *identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
 
-    self.isActive = [[dict  objectForKey:@"isActive" 
+    BOOL isActive = [[dict  objectForKey:@"isActive" 
                             expectedClass:NSNumber.class 
                             withTransformerClass:NSBooleanNumberTransformer.class] boolValue];
                           
-    self.balance = [[dict objectForKey:@"balance" expectedClass:NSNumber.class] floatValue];
+    float balance = [[dict objectForKey:@"balance" expectedClass:NSNumber.class] floatValue];
+    
+    //@{@"url":@"http://www.google.fr"}
+    NSURL *url = [dict  objectForKey:@"url" expectedClass:NSURL.class];
+    
+    NSDate *date = [dict  dateObjectForKey:@"date" withDateFormat:@"MM/dd/yyyy"];
 }
 
 ```
