@@ -31,7 +31,14 @@ Call the new ojectForKey: methods
 - (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat;
 ```
 
-Example : 
+Configure optional values
+```objective-c
+    [NSDateFormatter setForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
+    [NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+```
+
+
+Examples : 
 ```objective-c
 - (void)setupWithDictionary:(NSDictionary *)dict
 {
