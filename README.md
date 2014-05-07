@@ -10,7 +10,7 @@ Actual tranformers :
 - [x] NSStringTransformer,
 - [x] NSURLTransformer,
 - [x] NSArrayTransformer,
-- [ ] NSDateTransformer,
+- [x] NSDateTransformer,
 - [x] NSDecimalTransformer
 
 #How To
@@ -27,6 +27,8 @@ Call the new ojectForKey: methods
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass;
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass withTransformerClass:(Class)transformerClass;
 - (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock;
+- 
+- (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat;
 ```
 
 Example : 
@@ -43,6 +45,8 @@ Example :
     
     //@{@"url":@"http://www.google.fr"}
     NSURL *url = [dict  objectForKey:@"url" expectedClass:NSURL.class];
+    
+    NSDate *date = [dict  dateObjectForKey:@"date" withDateFormat:@"MM/dd/yyyy"];
 }
 
 ```
