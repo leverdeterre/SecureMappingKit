@@ -8,6 +8,7 @@
 
 #import "NSValueTransformer+SecureMappingKit.h"
 #import "NSDateTransformer.h"
+#import "NSDateFormatter+SecureMappingKit.h"
 
 @implementation NSValueTransformer (SecureMappingKit)
 
@@ -31,7 +32,7 @@
     
     if (nil == transformer) {
         NSDateTransformer *dateTransformer = [NSDateTransformer new];
-        dateTransformer.dateFormat = dateFormat;
+        dateTransformer.dateFormatter = [NSDateFormatter dateFormatterForDateFormat:dateFormat];
         transformer = dateTransformer;
         [threadDict setValue:transformer forKey:dateFormat];
     }

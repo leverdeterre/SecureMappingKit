@@ -7,15 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SecureDecoding.h"
 
-@interface JMOnePerson : NSObject
+@interface JMOnePerson : NSObject <SecureDecoding>
 
 @property (strong, nonatomic) NSString *identifier;
 @property (strong, nonatomic) NSString *guid;
 @property (assign, nonatomic) BOOL isActive;
 @property (assign, nonatomic) float balance;
 @property (strong, nonatomic) NSDecimalNumber* balanceDecimalNumber;
-
-- (void)setupWithDictionary:(NSDictionary *)dict;
 
 @end

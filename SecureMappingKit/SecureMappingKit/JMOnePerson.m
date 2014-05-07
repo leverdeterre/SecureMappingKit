@@ -11,11 +11,16 @@
 
 @implementation JMOnePerson
 
-- (void)setupWithDictionary:(NSDictionary *)dict
+-(void)decodeObjectWithDictionary:(NSDictionary *)dict
 {
     self.identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
-    self.isActive = [[dict objectForKey:@"isActive" expectedClass:NSNumber.class withTransformerClass:NSBooleanNumberTransformer.class] boolValue];
+    
+    self.isActive = [[dict objectForKey:@"isActive"
+                          expectedClass:NSNumber.class
+                   withTransformerClass:NSBooleanNumberTransformer.class] boolValue];
+    
     self.balance = [[dict objectForKey:@"balance" expectedClass:NSNumber.class] floatValue];
+    
     self.balanceDecimalNumber = [dict objectForKey:@"balance" expectedClass:NSDecimalNumber.class];
 }
 

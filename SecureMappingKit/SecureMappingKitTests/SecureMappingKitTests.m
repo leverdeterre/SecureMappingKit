@@ -28,45 +28,6 @@
     [super tearDown];
 }
 
-/*
-- (void)test1
-{
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"webservice.response.1"
-                                                         ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:jsonPath];
-    NSError *error = nil;
-    id json = [NSJSONSerialization JSONObjectWithData:data
-                                              options:kNilOptions
-                                                error:&error];
-    
-    NSDictionary *dict = [json firstObject];
-    JMOnePerson *person = [JMOnePerson new];
-    [person setupWithDictionary:dict];
-    XCTAssertEqualObjects(person.identifier, @"0", @"Should have matched");
-    XCTAssertEqual(person.isActive, NO, @"Should have matched");
-    XCTAssertEqualWithAccuracy(person.balance, 1508.63, 0.001,@"Should have matched");
-}
-
-- (void)test2
-{
-    NSString *jsonPath = [[NSBundle mainBundle] pathForResource:@"webservice.response.2"
-                                                         ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:jsonPath];
-    NSError *error = nil;
-    id json = [NSJSONSerialization JSONObjectWithData:data
-                                              options:kNilOptions
-                                                error:&error];
-    
-    NSDictionary *dict = [json firstObject];
-    JMOnePerson *person = [JMOnePerson new];
-    [person setupWithDictionary:dict];
-    
-    XCTAssertEqualObjects(person.identifier, @"1", @"Should have matched");
-    XCTAssertEqual(person.isActive, NO, @"Should have matched");
-    XCTAssertEqualWithAccuracy(person.balance, 2633.59,0.001, @"Should have matched");
-}
-
-*/
 - (void)testBoolValueTransformer
 {
     NSMutableDictionary *dict = [NSMutableDictionary new];
@@ -148,6 +109,25 @@
     testDict = @{@"balance": decimalWithPoint};
     result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformer.class];
     XCTAssertEqualObjects(result,d, @"Should have matched");
+}
+
+- (void)testComplexData
+{
+    NSDictionary *testDict = @{
+                               @"id": @(12345),
+                               @"isActive": @"1",
+                               @"balance": @"1900.01"};
+    
+    JMOnePerson *person = [JMOnePerson new];
+    [person decodeObjectWithDictionary:testDict];
+    
+    XCTAssertEqualObjects(person.identifier,@"12345", @"Should have matched");
+    XCTAssertEqual(person.isActive,TRUE, @"Should have matched");
+    
+    NSDecimalNumber *d = [[NSDecimalNumber alloc] initWithDecimal:[@(1900.01f) decimalValue]];
+    
+    //XCTAssertEqual(person.balance,1900.01, @"Should have matched");
+    XCTAssertEqualObjects(person.balanceDecimalNumber,d, @"Should have matched");
 }
 
 @end

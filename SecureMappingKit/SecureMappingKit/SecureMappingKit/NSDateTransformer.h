@@ -10,6 +10,6 @@
 
 @interface NSDateTransformer : NSValueTransformer
 
-@property (strong, nonatomic) NSString *dateFormat;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
 @end

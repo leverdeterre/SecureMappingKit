@@ -57,4 +57,11 @@ typedef id (^JMOTransformerBlock)(id value);
 
 - (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat;
 
+/*
+ OPTIONS
+@interface NSDateFormatter (SecureMappingKit)
++ (void)setForcedTimeZone:(NSTimeZone *)forcedTimeZone;
++ (void)setForcedlocale:(NSLocale *)forcedLocale;
+ */
+
 @end

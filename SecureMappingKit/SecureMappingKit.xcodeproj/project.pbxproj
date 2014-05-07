@@ -29,12 +29,6 @@
 		C2C3833E1916BFAF009FEDFA /* NSURLTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C383361916BFAF009FEDFA /* NSURLTransformer.m */; };
 		C2C3833F1916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C383381916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m */; };
 		C2C383431916C04C009FEDFA /* JMOnePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C383421916C04C009FEDFA /* JMOnePerson.m */; };
-		C2C383471916C07F009FEDFA /* webservice.response.1.json in Resources */ = {isa = PBXBuildFile; fileRef = C2C383441916C07F009FEDFA /* webservice.response.1.json */; };
-		C2C383481916C07F009FEDFA /* webservice.response.1.json in Resources */ = {isa = PBXBuildFile; fileRef = C2C383441916C07F009FEDFA /* webservice.response.1.json */; };
-		C2C383491916C07F009FEDFA /* webservice.response.2.json in Resources */ = {isa = PBXBuildFile; fileRef = C2C383451916C07F009FEDFA /* webservice.response.2.json */; };
-		C2C3834A1916C07F009FEDFA /* webservice.response.2.json in Resources */ = {isa = PBXBuildFile; fileRef = C2C383451916C07F009FEDFA /* webservice.response.2.json */; };
-		C2C3834B1916C07F009FEDFA /* webservice.response.3.json in Resources */ = {isa = PBXBuildFile; fileRef = C2C383461916C07F009FEDFA /* webservice.response.3.json */; };
-		C2C3834C1916C07F009FEDFA /* webservice.response.3.json in Resources */ = {isa = PBXBuildFile; fileRef = C2C383461916C07F009FEDFA /* webservice.response.3.json */; };
 		C2C3834F191834CE009FEDFA /* NSDecimalNumberTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C3834E191834CE009FEDFA /* NSDecimalNumberTransformer.m */; };
 		C2C38350191834CE009FEDFA /* NSDecimalNumberTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C3834E191834CE009FEDFA /* NSDecimalNumberTransformer.m */; };
 		C2C38353191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38352191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m */; };
@@ -42,6 +36,7 @@
 		C2C38357191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */; };
 		C2C38358191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */; };
 		C2C383611918B7C3009FEDFA /* NSDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C383601918B7C3009FEDFA /* NSDateTransformer.m */; };
+		C2C38365191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,9 +85,6 @@
 		C2C383381916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+SecureMappingKit.m"; sourceTree = "<group>"; };
 		C2C383411916C04C009FEDFA /* JMOnePerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMOnePerson.h; sourceTree = "<group>"; };
 		C2C383421916C04C009FEDFA /* JMOnePerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMOnePerson.m; sourceTree = "<group>"; };
-		C2C383441916C07F009FEDFA /* webservice.response.1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = webservice.response.1.json; sourceTree = "<group>"; };
-		C2C383451916C07F009FEDFA /* webservice.response.2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = webservice.response.2.json; sourceTree = "<group>"; };
-		C2C383461916C07F009FEDFA /* webservice.response.3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = webservice.response.3.json; sourceTree = "<group>"; };
 		C2C3834D191834CE009FEDFA /* NSDecimalNumberTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberTransformer.h; sourceTree = "<group>"; };
 		C2C3834E191834CE009FEDFA /* NSDecimalNumberTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDecimalNumberTransformer.m; sourceTree = "<group>"; };
 		C2C38351191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDecimalNumberTransformerWithDecimalSeparatorComa.h; sourceTree = "<group>"; };
@@ -101,6 +93,9 @@
 		C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDecimalNumberTransformerWithDecimalSeparatorPoint.m; sourceTree = "<group>"; };
 		C2C3835F1918B7C3009FEDFA /* NSDateTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDateTransformer.h; sourceTree = "<group>"; };
 		C2C383601918B7C3009FEDFA /* NSDateTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDateTransformer.m; sourceTree = "<group>"; };
+		C2C38362191AE008009FEDFA /* SecureDecoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureDecoding.h; sourceTree = "<group>"; };
+		C2C38363191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SecureMappingKit.h"; sourceTree = "<group>"; };
+		C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SecureMappingKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,9 +193,6 @@
 			isa = PBXGroup;
 			children = (
 				C2C3831C1916BF5B009FEDFA /* SecureMappingKitTests-Info.plist */,
-				C2C383441916C07F009FEDFA /* webservice.response.1.json */,
-				C2C383451916C07F009FEDFA /* webservice.response.2.json */,
-				C2C383461916C07F009FEDFA /* webservice.response.3.json */,
 				C2C3831D1916BF5B009FEDFA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -214,6 +206,9 @@
 				C2C383301916BFAF009FEDFA /* NSDictionary+SecureMappingKit.m */,
 				C2C383371916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.h */,
 				C2C383381916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m */,
+				C2C38363191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.h */,
+				C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */,
+				C2C38362191AE008009FEDFA /* SecureDecoding.h */,
 			);
 			name = SecureMappingKit;
 			path = SecureMappingKit/SecureMappingKit;
@@ -234,12 +229,12 @@
 				C2C3832C1916BFAF009FEDFA /* NSArrayTransformer.m */,
 				C2C3834D191834CE009FEDFA /* NSDecimalNumberTransformer.h */,
 				C2C3834E191834CE009FEDFA /* NSDecimalNumberTransformer.m */,
-				C2C3835F1918B7C3009FEDFA /* NSDateTransformer.h */,
-				C2C383601918B7C3009FEDFA /* NSDateTransformer.m */,
 				C2C38351191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.h */,
 				C2C38352191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m */,
 				C2C38355191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.h */,
 				C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */,
+				C2C3835F1918B7C3009FEDFA /* NSDateTransformer.h */,
+				C2C383601918B7C3009FEDFA /* NSDateTransformer.m */,
 			);
 			name = Transformers;
 			sourceTree = "<group>";
@@ -322,11 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2C3830E1916BF5B009FEDFA /* Images.xcassets in Resources */,
-				C2C383471916C07F009FEDFA /* webservice.response.1.json in Resources */,
 				C2C383001916BF5B009FEDFA /* InfoPlist.strings in Resources */,
-				C2C3834B1916C07F009FEDFA /* webservice.response.3.json in Resources */,
 				C2C383091916BF5B009FEDFA /* Main.storyboard in Resources */,
-				C2C383491916C07F009FEDFA /* webservice.response.2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,10 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2C3834A1916C07F009FEDFA /* webservice.response.2.json in Resources */,
 				C2C3831F1916BF5B009FEDFA /* InfoPlist.strings in Resources */,
-				C2C383481916C07F009FEDFA /* webservice.response.1.json in Resources */,
-				C2C3834C1916C07F009FEDFA /* webservice.response.3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +351,7 @@
 				C2C3830C1916BF5B009FEDFA /* JMOViewController.m in Sources */,
 				C2C383391916BFAF009FEDFA /* NSArrayTransformer.m in Sources */,
 				C2C383061916BF5B009FEDFA /* JMOAppDelegate.m in Sources */,
+				C2C38365191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m in Sources */,
 				C2C3834F191834CE009FEDFA /* NSDecimalNumberTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
