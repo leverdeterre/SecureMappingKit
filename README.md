@@ -33,13 +33,16 @@ Example :
 ```objective-c
 - (void)setupWithDictionary:(NSDictionary *)dict
 {
-    self.identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
+    NSString *identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
 
-    self.isActive = [[dict  objectForKey:@"isActive" 
+    BOOL isActive = [[dict  objectForKey:@"isActive" 
                             expectedClass:NSNumber.class 
                             withTransformerClass:NSBooleanNumberTransformer.class] boolValue];
                           
-    self.balance = [[dict objectForKey:@"balance" expectedClass:NSNumber.class] floatValue];
+    float balance = [[dict objectForKey:@"balance" expectedClass:NSNumber.class] floatValue];
+    
+    //@{@"url":@"http://www.google.fr"}
+    NSURL *url = [dict  objectForKey:@"url" expectedClass:NSURL.class];
 }
 
 ```
