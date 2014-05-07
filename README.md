@@ -27,7 +27,7 @@ Call the new ojectForKey: methods
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass;
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass withTransformerClass:(Class)transformerClass;
 - (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock;
-- 
+
 - (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat;
 ```
 
