@@ -22,6 +22,8 @@
     self.balance = [[dict objectForKey:@"balance" expectedClass:NSNumber.class] floatValue];
     
     self.balanceDecimalNumber = [dict objectForKey:@"balance" expectedClass:NSDecimalNumber.class];
+    
+    self.birthDate =  [dict dateObjectForKey:@"birthDate" withDateFormat:@"MM/dd/yyyy"];
 }
 
 @end

@@ -96,6 +96,7 @@
 		C2C38362191AE008009FEDFA /* SecureDecoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureDecoding.h; sourceTree = "<group>"; };
 		C2C38363191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SecureMappingKit.h"; sourceTree = "<group>"; };
 		C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SecureMappingKit.m"; sourceTree = "<group>"; };
+		C2C38366191AEC92009FEDFA /* SecureMappingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureMappingKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				C2C383401916BFFC009FEDFA /* Transformers */,
+				C2C38366191AEC92009FEDFA /* SecureMappingKit.h */,
 				C2C3832F1916BFAF009FEDFA /* NSDictionary+SecureMappingKit.h */,
 				C2C383301916BFAF009FEDFA /* NSDictionary+SecureMappingKit.m */,
 				C2C383371916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.h */,

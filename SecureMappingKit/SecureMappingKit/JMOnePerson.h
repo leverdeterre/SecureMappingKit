@@ -16,5 +16,5 @@
 @property (assign, nonatomic) BOOL isActive;
 @property (assign, nonatomic) float balance;
 @property (strong, nonatomic) NSDecimalNumber* balanceDecimalNumber;
-
+@property (strong, nonatomic) NSDate *birthDate;
 @end

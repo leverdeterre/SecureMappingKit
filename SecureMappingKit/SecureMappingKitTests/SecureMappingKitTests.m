@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "JMOnePerson.h"
-#import "NSDictionary+SecureMappingKit.h"
+#import "SecureMappingKit.h"
 
 @interface SecureMappingKitTests : XCTestCase
 
@@ -113,10 +113,15 @@
 
 - (void)testComplexData
 {
+    [NSDateFormatter setForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
+    [NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+
     NSDictionary *testDict = @{
                                @"id": @(12345),
                                @"isActive": @"1",
-                               @"balance": @"1900.01"};
+                               @"balance": @"1900.01",
+                               @"birthDate": @"07/26/1982"
+                               };
     
     JMOnePerson *person = [JMOnePerson new];
     [person decodeObjectWithDictionary:testDict];
