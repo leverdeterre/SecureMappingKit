@@ -11,7 +11,7 @@
 
 @implementation NSDateFormatter (SecureMappingKit)
 
-+ (instancetype) dateFormatterForDateFormat:(NSString *)dateFormat
++ (instancetype)dateFormatterForDateFormat:(NSString *)dateFormat
 {
     NSDictionary *threadDict = [[NSThread currentThread] threadDictionary];
     NSDateFormatter *dateFormatter = nil;

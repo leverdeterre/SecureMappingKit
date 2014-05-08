@@ -28,11 +28,14 @@
 + (instancetype)transformerForClass:(Class)transformerClass withDateFormat:(NSString *)dateFormat
 {
     NSDictionary *threadDict = [[NSThread currentThread] threadDictionary];
-    NSValueTransformer *transformer = [threadDict objectForKey:dateFormat];
+    NSValueTransformer *transformer = [threadDict objectForKey:[NSString stringWithFormat:@"%@_%@",NSStringFromClass(transformerClass),dateFormat]];
     
     if (nil == transformer) {
-        NSDateTransformer *dateTransformer = [NSDateTransformer new];
-        dateTransformer.dateFormatter = [NSDateFormatter dateFormatterForDateFormat:dateFormat];
+        NSValueTransformer *dateTransformer = [transformerClass new];
+        if ([dateTransformer respondsToSelector:@selector(setDateFormatter:)]) {
+            NSValueTransformerWithDateFormat *transformerWithDateFormater = (NSValueTransformerWithDateFormat *)dateTransformer;
+            transformerWithDateFormater.dateFormatter = [NSDateFormatter dateFormatterForDateFormat:dateFormat];
+        }
         transformer = dateTransformer;
         [threadDict setValue:transformer forKey:dateFormat];
     }

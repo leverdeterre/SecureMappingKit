@@ -27,7 +27,33 @@
     [super tearDown];
 }
 
-- (void)testDecimalValueTransformers
+- (void)testNSDecimalNumberTransformerWithDecimalSeparatorComa
+{
+    NSString *decimalWithComa = @"1800,98";
+    NSDecimalNumber *d = [[NSDecimalNumber alloc] initWithDecimal:[@(1800.98f) decimalValue]];
+
+    /**
+     *  Validate NSDecimalNumberTransformerWithDecimalSeparatorComa
+     */
+    NSDictionary *testDict = @{@"balance": decimalWithComa};
+    id result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformerWithDecimalSeparatorComa.class];
+    XCTAssertEqualObjects(result,d, @"Should have matched");
+}
+
+- (void)testNSDecimalNumberTransformerWithDecimalSeparatorPoint
+{
+    NSString *decimalWithPoint = @"1800.98";
+    NSDecimalNumber *d = [[NSDecimalNumber alloc] initWithDecimal:[@(1800.98f) decimalValue]];
+
+    /**
+     *  Validate NSDecimalNumberTransformerWithDecimalSeparatorPoint
+     */
+    NSDictionary *testDict = @{@"balance": decimalWithPoint};
+    id result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformerWithDecimalSeparatorPoint.class];
+    XCTAssertEqualObjects(result,d, @"Should have matched");
+}
+
+- (void)testNSDecimalNumberTransformer
 {
     NSString *decimalWithPoint = @"1800.98";
     NSString *decimalWithComa = @"1800,98";
@@ -35,24 +61,10 @@
     NSDecimalNumber *d = [[NSDecimalNumber alloc] initWithDecimal:[@(1800.98f) decimalValue]];
     
     /**
-     *  Validate NSDecimalNumberTransformerWithDecimalSeparatorPoint
-     */
-    NSDictionary *testDict = @{@"balance": decimalWithPoint};
-    id result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformerWithDecimalSeparatorPoint.class];
-    XCTAssertEqualObjects(result,d, @"Should have matched");
-    
-    /**
-     *  Validate NSDecimalNumberTransformerWithDecimalSeparatorComa
-     */
-    testDict = @{@"balance": decimalWithComa};
-    result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformerWithDecimalSeparatorComa.class];
-    XCTAssertEqualObjects(result,d, @"Should have matched");
-    
-    /**
      *  Validate NSDecimalNumberTransformer
      */
-    testDict = @{@"balance": number};
-    result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformer.class];
+    NSDictionary *testDict = @{@"balance": number};
+    id result = [testDict objectForKey:@"balance" expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformer.class];
     XCTAssertEqualObjects(result,d, @"Should have matched");
     
     testDict = @{@"balance": decimalWithComa};

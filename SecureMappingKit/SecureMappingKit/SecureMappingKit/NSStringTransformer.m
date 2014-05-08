@@ -31,6 +31,12 @@
         return value;
     }
     
+    if ([value isKindOfClass:[NSDate class]]) {
+        if (self.dateFormatter) {
+            return [self.dateFormatter stringFromDate:value];
+        }
+    }
+    
     if ([value isKindOfClass:[NSObject class]]) {
         return [NSString stringWithFormat:@"%@",value];
     }

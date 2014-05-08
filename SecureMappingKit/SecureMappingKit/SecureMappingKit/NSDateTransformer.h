@@ -6,10 +6,8 @@
 //  Copyright (c) 2014 Jerome Morissard. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NSValueTransformerWithDateFormat.h"
 
-@interface NSDateTransformer : NSValueTransformer
-
-@property (strong, nonatomic) NSDateFormatter *dateFormatter;
+@interface NSDateTransformer : NSValueTransformerWithDateFormat
 
 @end

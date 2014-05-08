@@ -53,5 +53,10 @@
     XCTAssertEqualObjects(identifier, @(12345), @"Should have matched");
 }
 
+/*
+ - (NSNumber *)numberForKey:(id)aKey;
+ - (NSNumber *)boolNumberForKey:(id)aKey;
+ */
+
 
 @end

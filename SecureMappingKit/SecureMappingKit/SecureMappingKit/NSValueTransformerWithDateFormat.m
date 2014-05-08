@@ -1,13 +1,13 @@
 //
-//  NSStringTransformer.h
+//  NSValueTransformerWithDateFormat.m
 //  SecureMappingKit
 //
-//  Created by Jerome Morissard on 5/4/14.
+//  Created by Jerome Morissard on 5/8/14.
 //  Copyright (c) 2014 Jerome Morissard. All rights reserved.
 //
 
 #import "NSValueTransformerWithDateFormat.h"
 
-@interface NSStringTransformer : NSValueTransformerWithDateFormat
+@implementation NSValueTransformerWithDateFormat
 
 @end
