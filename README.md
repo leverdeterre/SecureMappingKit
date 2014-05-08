@@ -2,7 +2,7 @@ SecureMappingKit
 ==============================
 Securize your mapping between your JSON and your object.
 What is security ? The library is in charge of the convertion of the JSON objects to your desired types. 
-If your are expected a NSString and the JSON gives you a NSNumber, SecureMappingKit transforms it into the exepected class, using NSValueTransformer.
+If your are expected a NSDate and the JSON gives you a NSString, SecureMappingKit transforms it into the exepected class, using NSValueTransformer.
 
 Actual tranformers : 
 - [x] NSNumberTransformer,
@@ -13,10 +13,10 @@ Actual tranformers :
 - [x] NSDateTransformer,
 - [x] NSDecimalTransformer
 
-## ++ 
+## +_+ 
 - [x] ThreadSafe,
 - [x] Memory usage, DateFormaters and ValueTransformers are allocated once and stored on the Thread dictionary.
-
+- [x] Secure mappings 
 
 ## Get SecureMappingKit (Soon)
 
