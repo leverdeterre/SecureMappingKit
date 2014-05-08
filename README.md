@@ -1,7 +1,7 @@
 SecureMappingKit 
 ==============================
 Securize your mapping between your JSON and your object.
-What is security ? The library make effort to convert the JSON class your the desired class. 
+What is security ? The library is in charge of the convertion of the JSON objects to your desired types. 
 If your are expected a NSString and the JSON gives you a NSNumber, SecureMappingKit transforms it into the exepected class, using NSValueTransformer.
 
 Actual tranformers : 
