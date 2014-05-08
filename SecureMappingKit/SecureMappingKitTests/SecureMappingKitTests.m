@@ -30,8 +30,8 @@
 
 - (void)testComplexData
 {
-    [NSDateFormatter setForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
-    [NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+    [SecureMappingKit setDateFormatterForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
+    [SecureMappingKit setDateFormatterForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
 
     NSDictionary *testDict = @{
                                @"id": @(12345),

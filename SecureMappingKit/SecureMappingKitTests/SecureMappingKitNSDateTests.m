@@ -29,9 +29,9 @@
 
 - (void)testNSDateTransformer
 {
-    [NSDateFormatter setForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
-    [NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
-    
+    [SecureMappingKit setDateFormatterForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
+    [SecureMappingKit setDateFormatterForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+
     NSDictionary *testDict = @{@"birthDate": @"07/26/1982"};
     NSDate *date = [testDict dateForKey:@"birthDate" withDateFormat:@"MM/dd/yyyy"];
     NSTimeInterval interval = [date timeIntervalSince1970];

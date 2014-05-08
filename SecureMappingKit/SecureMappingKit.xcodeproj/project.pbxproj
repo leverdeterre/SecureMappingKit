@@ -44,6 +44,7 @@
 		C2C38372191B7996009FEDFA /* SecureMappingKitNSDateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38371191B7996009FEDFA /* SecureMappingKitNSDateTests.m */; };
 		C2C38375191B7D58009FEDFA /* NSDate+SecureMappingKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38374191B7D58009FEDFA /* NSDate+SecureMappingKit.m */; };
 		C2C38378191B7FD1009FEDFA /* NSValueTransformerWithDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38377191B7FD1009FEDFA /* NSValueTransformerWithDateFormat.m */; };
+		C2C3837B191BFE8C009FEDFA /* SecureMappingKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C3837A191BFE8C009FEDFA /* SecureMappingKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,7 +104,6 @@
 		C2C38362191AE008009FEDFA /* SecureDecoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureDecoding.h; sourceTree = "<group>"; };
 		C2C38363191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SecureMappingKit.h"; sourceTree = "<group>"; };
 		C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SecureMappingKit.m"; sourceTree = "<group>"; };
-		C2C38366191AEC92009FEDFA /* SecureMappingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureMappingKit.h; sourceTree = "<group>"; };
 		C2C3836B191B7675009FEDFA /* SecureMappingKitNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureMappingKitNumberTests.m; sourceTree = "<group>"; };
 		C2C3836D191B76C2009FEDFA /* SecureMappingKitNSURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureMappingKitNSURLTests.m; sourceTree = "<group>"; };
 		C2C3836F191B76F3009FEDFA /* SecureMappingKitNSDecimalNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureMappingKitNSDecimalNumberTests.m; sourceTree = "<group>"; };
@@ -112,6 +112,8 @@
 		C2C38374191B7D58009FEDFA /* NSDate+SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SecureMappingKit.m"; sourceTree = "<group>"; };
 		C2C38376191B7FD1009FEDFA /* NSValueTransformerWithDateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSValueTransformerWithDateFormat.h; sourceTree = "<group>"; };
 		C2C38377191B7FD1009FEDFA /* NSValueTransformerWithDateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSValueTransformerWithDateFormat.m; sourceTree = "<group>"; };
+		C2C38379191BFE8C009FEDFA /* SecureMappingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureMappingKit.h; sourceTree = "<group>"; };
+		C2C3837A191BFE8C009FEDFA /* SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureMappingKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,7 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				C2C383401916BFFC009FEDFA /* Transformers */,
-				C2C38366191AEC92009FEDFA /* SecureMappingKit.h */,
+				C2C38379191BFE8C009FEDFA /* SecureMappingKit.h */,
+				C2C3837A191BFE8C009FEDFA /* SecureMappingKit.m */,
 				C2C38362191AE008009FEDFA /* SecureDecoding.h */,
 				C2C3832F1916BFAF009FEDFA /* NSDictionary+SecureMappingKit.h */,
 				C2C383301916BFAF009FEDFA /* NSDictionary+SecureMappingKit.m */,
@@ -368,6 +371,7 @@
 				C2C383611918B7C3009FEDFA /* NSDateTransformer.m in Sources */,
 				C2C3833B1916BFAF009FEDFA /* NSDictionary+SecureMappingKit.m in Sources */,
 				C2C3833C1916BFAF009FEDFA /* NSNumberTransformer.m in Sources */,
+				C2C3837B191BFE8C009FEDFA /* SecureMappingKit.m in Sources */,
 				C2C3833F1916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m in Sources */,
 				C2C38378191B7FD1009FEDFA /* NSValueTransformerWithDateFormat.m in Sources */,
 				C2C383431916C04C009FEDFA /* JMOnePerson.m in Sources */,

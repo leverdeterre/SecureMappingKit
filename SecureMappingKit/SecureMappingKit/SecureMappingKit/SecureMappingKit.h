@@ -6,8 +6,7 @@
 //  Copyright (c) 2014 Jerome Morissard. All rights reserved.
 //
 
-#ifndef SecureMappingKit_SecureMappingKit_h
-#define SecureMappingKit_SecureMappingKit_h
+#import <Foundation/Foundation.h>
 
 //Categories
 #import "NSDictionary+SecureMappingKit.h"
@@ -17,4 +16,11 @@
 
 //Protocols
 #import "SecureDecoding.h"
-#endif
+
+@interface SecureMappingKit : NSObject
+
++ (void)setDateFormatterForcedTimeZone:(NSTimeZone *)forcedTimeZone;
++ (void)setDateFormatterForcedlocale:(NSLocale *)forcedLocale;
++ (void)setLogEnable:(BOOL)logEnable;
+
+@end
