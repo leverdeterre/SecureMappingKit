@@ -13,7 +13,10 @@ Actual tranformers :
 - [x] NSDateTransformer,
 - [x] NSDecimalTransformer
 
-#How To
+## ++ 
+- [x] ThreadSafe,
+- [x] Memory usage, DateFormaters and ValueTransformers are allocated once and stored on the Thread dictionary.
+
 
 ## Get SecureMappingKit (Soon)
 
