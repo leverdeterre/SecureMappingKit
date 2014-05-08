@@ -33,14 +33,14 @@ Call the new ojectForKey: methods
 
 Configure optional values
 ```objective-c
-    [NSDateFormatter setForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
-    [NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+[NSDateFormatter setForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
+[NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
 ```
 
 
 Examples : 
 ```objective-c
-- (void)setupWithDictionary:(NSDictionary *)dict
+- (void)decodeObjectWithDictionary:(NSDictionary *)dict
 {
     NSString *identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
 
