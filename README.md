@@ -16,7 +16,8 @@ Actual tranformers :
 ## +_+ 
 - [x] ThreadSafe,
 - [x] Memory usage, DateFormaters and ValueTransformers are allocated once and stored on the Thread dictionary.
-- [x] Secure mappings 
+- [x] Secure mappings,
+- [x] lots of unit tests
 
 ## Get SecureMappingKit (Soon)
 
