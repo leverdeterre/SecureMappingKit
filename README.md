@@ -20,15 +20,20 @@ Actual tranformers :
 If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `pod 'SecureMappingKit', '~>0.0.x'`. 
 
 ##Using SecureMappingKit
-
-Call the new ojectForKey: methods
+### On a NSDictionnary
 
 ```objective-c
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass;
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass withTransformerClass:(Class)transformerClass;
 - (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock;
 
-- (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat;
+- (NSNumber *)numberForKey:(id)aKey;
+- (NSNumber *)boolNumberForKey:(id)aKey;
+- (NSDecimalNumber *)decimalNumberForKey:(id)aKey;
+- (NSString *)stringForKey:(id)aKey;
+- (NSURL *)urlForKey:(id)aKey;
+- (NSArray *)arrayForKey:(id)aKey;
+- (NSDate *)dateForKey:(id)aKey withDateFormat:(NSString *)dateFormat;
 ```
 
 Configure optional values
@@ -37,6 +42,11 @@ Configure optional values
 [NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
 ```
 
+### On a NSDate
+```objective-c
+
+- (NSString *)stringWithDateFormat:(NSString *)dateFormat;
+```
 
 Examples : 
 ```objective-c
@@ -55,5 +65,6 @@ Examples :
     
     NSDate *date = [dict  dateObjectForKey:@"date" withDateFormat:@"MM/dd/yyyy"];
 }
-
 ```
+
+
