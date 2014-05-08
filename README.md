@@ -58,11 +58,13 @@ Examples :
 {
     NSString *identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
 
-    BOOL isActive = [[dict  objectForKey:@"isActive" 
+    //NSNumber has boolean
+    NSNumber *isActive = [dict  objectForKey:@"isActive" 
                             expectedClass:NSNumber.class 
-                            withTransformerClass:NSBooleanNumberTransformer.class] boolValue];
-                          
-    float balance = [[dict objectForKey:@"balance" expectedClass:NSNumber.class] floatValue];
+                            withTransformerClass:NSBooleanNumberTransformer.class];
+                            
+    //NSNumber
+    NSNumber balance = [dict objectForKey:@"balance" expectedClass:NSNumber.class];
     
     //@{@"url":@"http://www.google.fr"}
     NSURL *url = [dict  objectForKey:@"url" expectedClass:NSURL.class];
