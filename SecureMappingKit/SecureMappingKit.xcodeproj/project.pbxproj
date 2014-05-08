@@ -37,6 +37,10 @@
 		C2C38358191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38356191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m */; };
 		C2C383611918B7C3009FEDFA /* NSDateTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C383601918B7C3009FEDFA /* NSDateTransformer.m */; };
 		C2C38365191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */; };
+		C2C38367191B6A27009FEDFA /* JMOnePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C383421916C04C009FEDFA /* JMOnePerson.m */; };
+		C2C3836C191B7675009FEDFA /* SecureMappingKitNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C3836B191B7675009FEDFA /* SecureMappingKitNumberTests.m */; };
+		C2C3836E191B76C2009FEDFA /* SecureMappingKitNSURLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C3836D191B76C2009FEDFA /* SecureMappingKitNSURLTests.m */; };
+		C2C38370191B76F3009FEDFA /* SecureMappingKitNSDecimalNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C3836F191B76F3009FEDFA /* SecureMappingKitNSDecimalNumberTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,9 @@
 		C2C38363191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+SecureMappingKit.h"; sourceTree = "<group>"; };
 		C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+SecureMappingKit.m"; sourceTree = "<group>"; };
 		C2C38366191AEC92009FEDFA /* SecureMappingKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecureMappingKit.h; sourceTree = "<group>"; };
+		C2C3836B191B7675009FEDFA /* SecureMappingKitNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureMappingKitNumberTests.m; sourceTree = "<group>"; };
+		C2C3836D191B76C2009FEDFA /* SecureMappingKitNSURLTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureMappingKitNSURLTests.m; sourceTree = "<group>"; };
+		C2C3836F191B76F3009FEDFA /* SecureMappingKitNSDecimalNumberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecureMappingKitNSDecimalNumberTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +192,9 @@
 			isa = PBXGroup;
 			children = (
 				C2C383201916BF5B009FEDFA /* SecureMappingKitTests.m */,
+				C2C3836B191B7675009FEDFA /* SecureMappingKitNumberTests.m */,
+				C2C3836D191B76C2009FEDFA /* SecureMappingKitNSURLTests.m */,
+				C2C3836F191B76F3009FEDFA /* SecureMappingKitNSDecimalNumberTests.m */,
 				C2C3831B1916BF5B009FEDFA /* Supporting Files */,
 			);
 			path = SecureMappingKitTests;
@@ -204,13 +214,13 @@
 			children = (
 				C2C383401916BFFC009FEDFA /* Transformers */,
 				C2C38366191AEC92009FEDFA /* SecureMappingKit.h */,
+				C2C38362191AE008009FEDFA /* SecureDecoding.h */,
 				C2C3832F1916BFAF009FEDFA /* NSDictionary+SecureMappingKit.h */,
 				C2C383301916BFAF009FEDFA /* NSDictionary+SecureMappingKit.m */,
 				C2C383371916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.h */,
 				C2C383381916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m */,
 				C2C38363191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.h */,
 				C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */,
-				C2C38362191AE008009FEDFA /* SecureDecoding.h */,
 			);
 			name = SecureMappingKit;
 			path = SecureMappingKit/SecureMappingKit;
@@ -362,10 +372,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2C38370191B76F3009FEDFA /* SecureMappingKitNSDecimalNumberTests.m in Sources */,
+				C2C38367191B6A27009FEDFA /* JMOnePerson.m in Sources */,
+				C2C3836C191B7675009FEDFA /* SecureMappingKitNumberTests.m in Sources */,
 				C2C383211916BF5B009FEDFA /* SecureMappingKitTests.m in Sources */,
 				C2C38350191834CE009FEDFA /* NSDecimalNumberTransformer.m in Sources */,
 				C2C38358191835EA009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorPoint.m in Sources */,
 				C2C38354191835A8009FEDFA /* NSDecimalNumberTransformerWithDecimalSeparatorComa.m in Sources */,
+				C2C3836E191B76C2009FEDFA /* SecureMappingKitNSURLTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

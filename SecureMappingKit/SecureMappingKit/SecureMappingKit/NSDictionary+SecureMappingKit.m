@@ -53,7 +53,37 @@
     return transformerBlock([self objectForKey:aKey]);
 }
 
-- (NSDate *)dateObjectForKey:(id)aKey withDateFormat:(NSString *)dateFromat
+- (NSNumber *)numberForKey:(id)aKey
+{
+    return (NSNumber *)[self objectForKey:aKey expectedClass:NSNumberTransformer.class];
+}
+
+- (NSNumber *)boolNumberForKey:(id)aKey
+{
+    return (NSNumber *)[self objectForKey:aKey expectedClass:NSBooleanNumberTransformer.class];
+}
+
+- (NSDecimalNumber *)decimalNumberForKey:(id)aKey
+{
+    return (NSDecimalNumber *)[self objectForKey:aKey expectedClass:NSDecimalNumberTransformer.class];
+}
+
+- (NSString *)stringForKey:(id)aKey
+{
+    return (NSString *)[self objectForKey:aKey expectedClass:NSStringTransformer.class];
+}
+
+- (NSURL *)urlForKey:(id)aKey
+{
+    return (NSURL *)[self objectForKey:aKey expectedClass:NSURLTransformer.class];
+}
+
+- (NSArray *)arrayForKey:(id)aKey
+{
+    return (NSArray *)[self objectForKey:aKey expectedClass:NSArrayTransformer.class];
+}
+
+- (NSDate *)dateForKey:(id)aKey withDateFormat:(NSString *)dateFormat
 {
     id obj = [self objectForKey:aKey];
     if (aKey == nil) {
@@ -61,11 +91,15 @@
         return nil;
     }
     
+    if (dateFormat == nil) {
+        NSAssert(dateFormat==nil, @"dateFormat can't be nil");
+        return nil;
+    }
+    
     Class transformerClass = NSDateTransformer.class;
     NSValueTransformer *transformer = [NSValueTransformer transformerForClass:transformerClass
-                                                               withDateFormat:dateFromat];
+                                                               withDateFormat:dateFormat];
     return [transformer transformedValue:obj];
 }
-
 
 @end
