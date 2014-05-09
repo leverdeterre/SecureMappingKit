@@ -19,7 +19,7 @@
 #import "NSDecimalNumberTransformerWithDecimalSeparatorPoint.h"
 #import "NSDateTransformer.h"
 
-typedef id (^JMOTransformerBlock)(id value);
+typedef id (^JMTransformerBlock)(id value);
 
 @interface NSDictionary (SecureMappingKit)
 
@@ -53,7 +53,7 @@ typedef id (^JMOTransformerBlock)(id value);
  *
  *  @return id
  */
-- (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock;
+- (id)objectForKey:(id)aKey withTransformerBlock:(JMTransformerBlock)transformerBlock;
 
 - (NSNumber *)numberForKey:(id)aKey;
 - (NSNumber *)boolNumberForKey:(id)aKey;

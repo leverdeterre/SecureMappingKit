@@ -34,7 +34,7 @@
     return nil;
 }
 
-- (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock
+- (id)objectForKey:(id)aKey withTransformerBlock:(JMTransformerBlock)transformerBlock
 {
     return transformerBlock([self objectForKey:aKey]);
 }
