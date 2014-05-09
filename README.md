@@ -37,7 +37,7 @@ If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `p
 - (NSString *)stringForKey:(id)aKey;
 - (NSURL *)urlForKey:(id)aKey;
 - (NSArray *)arrayForKey:(id)aKey;
-- (NSDate *)dateForKey:(id)aKey withDateFormat:(NSString *)dateFormat;
+- (NSDate *)dateForKey:(id)aKey usingDateFormat:(NSString *)dateFormat;
 ```
 
 Configure optional values
@@ -47,27 +47,34 @@ Configure optional values
 [SecureMappingKit setLogEnable:YES];
 ```
 
-### On a NSDate
+### On other classes ?
 ```objective-c
-
-- (NSString *)stringWithDateFormat:(NSString *)dateFormat;
+[NSNumber numberFromObject:obj];
+[NSNumber boolNumberFromObject:@"true"];
+[NSNumber boolNumberFromObject:@"1"];
+[NSNumber boolNumberFromObject:@(1)];
+[NSDecimalNumber decimalNumberFromObject:@"1,1"];
+[NSString stringFromObject:@(1)];
+[NSURL urlFromObject:@"https://developer.apple.com/design/"];
+[NSDate dateFromObject:@"07/26/1982" usingDateFormat:@"MM/dd/yyyy"]
 ```
 
-Examples : 
+##Using SecureMappingKit, implement SecureDecoding protocol
+
 ```objective-c
 - (void)decodeObjectWithDictionary:(NSDictionary *)dict
 {
     NSString *identifier = [dict objectForKey:@"id" expectedClass:NSString.class];
 
     //NSNumber has boolean
-    NSNumber *isActive = [dict  objectForKey:@"isActive" 
-                            expectedClass:NSNumber.class 
-                            withTransformerClass:NSBooleanNumberTransformer.class];
+    NSNumber *isActive = [dict objectForKey:@"isActive" 
+                              expectedClass:NSNumber.class 
+                       withTransformerClass:NSBooleanNumberTransformer.class];
                             
     //NSNumber
     NSNumber balance = [dict objectForKey:@"balance" expectedClass:NSNumber.class];
     
-    //@{@"url":@"http://www.google.fr"}
+    //@{@"url":@"https://developer.apple.com/design/"}
     NSURL *url = [dict  objectForKey:@"url" expectedClass:NSURL.class];
     
     NSDate *date = [dict  dateObjectForKey:@"date" withDateFormat:@"MM/dd/yyyy"];
