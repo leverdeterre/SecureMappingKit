@@ -13,6 +13,7 @@
 #import "NSValueTransformer+SecureMappingKit.h"
 #import "NSDateFormatter+SecureMappingKit.h"
 #import "NSDate+SecureMappingKit.h"
+#import "NSObject+SecureMappingKit.h"
 
 //Protocols
 #import "SecureDecoding.h"

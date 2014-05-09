@@ -42,6 +42,13 @@
     
     bValue = [dict objectForKey:@"isActiveNumber" expectedClass:[NSNumber class] withTransformerClass:NSBooleanNumberTransformer.class];
     XCTAssertEqual(bValue, @(NO), @"Should have matched");
+    
+    bValue = [dict boolNumberForKey:@"isActiveNumber"];
+    XCTAssertEqual(bValue, @(NO), @"Should have matched");
+    
+    id obj = [dict objectForKey:@"isActiveNumber"];
+    bValue = [NSNumber boolNumberFromObject:obj];
+    XCTAssertEqual(bValue, @(NO), @"Should have matched");
 }
 
 - (void)testNumberValueTransformers
@@ -51,12 +58,13 @@
     
     id identifier = [dict objectForKey:@"id" expectedClass:[NSNumber class]];
     XCTAssertEqualObjects(identifier, @(12345), @"Should have matched");
+    
+    identifier = [dict numberForKey:@"id"];
+    XCTAssertEqualObjects(identifier, @(12345), @"Should have matched");
+    
+    id obj = [dict objectForKey:@"id"];
+    identifier = [NSNumber numberFromObject:obj];
+    XCTAssertEqualObjects(identifier, @(12345), @"Should have matched");
 }
-
-/*
- - (NSNumber *)numberForKey:(id)aKey;
- - (NSNumber *)boolNumberForKey:(id)aKey;
- */
-
 
 @end

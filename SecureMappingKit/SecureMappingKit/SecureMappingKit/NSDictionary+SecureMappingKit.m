@@ -41,32 +41,32 @@
 
 - (NSNumber *)numberForKey:(id)aKey
 {
-    return (NSNumber *)[self objectForKey:aKey expectedClass:NSNumberTransformer.class];
+    return (NSNumber *)[self objectForKey:aKey expectedClass:NSNumber.class withTransformerClass:NSNumberTransformer.class];
 }
 
 - (NSNumber *)boolNumberForKey:(id)aKey
 {
-    return (NSNumber *)[self objectForKey:aKey expectedClass:NSBooleanNumberTransformer.class];
+    return (NSNumber *)[self objectForKey:aKey expectedClass:NSNumber.class withTransformerClass:NSBooleanNumberTransformer.class];
 }
 
 - (NSDecimalNumber *)decimalNumberForKey:(id)aKey
 {
-    return (NSDecimalNumber *)[self objectForKey:aKey expectedClass:NSDecimalNumberTransformer.class];
+    return (NSDecimalNumber *)[self objectForKey:aKey expectedClass:NSDecimalNumber.class withTransformerClass:NSDecimalNumberTransformer.class];
 }
 
 - (NSString *)stringForKey:(id)aKey
 {
-    return (NSString *)[self objectForKey:aKey expectedClass:NSStringTransformer.class];
+    return (NSString *)[self objectForKey:aKey expectedClass:NSString.class withTransformerClass:NSStringTransformer.class];
 }
 
 - (NSURL *)urlForKey:(id)aKey
 {
-    return (NSURL *)[self objectForKey:aKey expectedClass:NSURLTransformer.class];
+    return (NSURL *)[self objectForKey:aKey expectedClass:NSURL.class withTransformerClass:NSURLTransformer.class];
 }
 
 - (NSArray *)arrayForKey:(id)aKey
 {
-    return (NSArray *)[self objectForKey:aKey expectedClass:NSArrayTransformer.class];
+    return (NSArray *)[self objectForKey:aKey expectedClass:NSArray.class withTransformerClass:NSArrayTransformer.class];
 }
 
 - (NSDate *)dateForKey:(id)aKey usingDateFormat:(NSString *)dateFormat
