@@ -47,16 +47,16 @@ Configure optional values
 [SecureMappingKit setLogEnable:YES];
 ```
 
-### On other objects ?
+### On other classes ?
 ```objective-c
-    [NSNumber numberFromObject:obj];
-    [NSNumber boolNumberFromObject:@"true"];
-    [NSNumber boolNumberFromObject:@"1"];
-    [NSNumber boolNumberFromObject:@(1)];
-    [NSDecimalNumber decimalNumberFromObject:@"1,1"];
-    [NSString stringFromObject:@(1)];
-    [NSURL urlFromObject:@"https://developer.apple.com/design/"];
-    [NSDate dateFromObject:@"07/26/1982" usingDateFormat:@"MM/dd/yyyy"]
+[NSNumber numberFromObject:obj];
+[NSNumber boolNumberFromObject:@"true"];
+[NSNumber boolNumberFromObject:@"1"];
+[NSNumber boolNumberFromObject:@(1)];
+[NSDecimalNumber decimalNumberFromObject:@"1,1"];
+[NSString stringFromObject:@(1)];
+[NSURL urlFromObject:@"https://developer.apple.com/design/"];
+[NSDate dateFromObject:@"07/26/1982" usingDateFormat:@"MM/dd/yyyy"]
 ```
 
 ##Using SecureMappingKit, implement SecureDecoding protocol
