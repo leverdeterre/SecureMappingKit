@@ -14,7 +14,7 @@
 
 - (NSString *)stringUsingDateFormat:(NSString *)dateFormat
 {
-    NSStringTransformer *transformer = [NSStringTransformer transformerForClass:NSStringTransformer.class withDateFormat:dateFormat];
+    NSStringTransformer *transformer = [NSStringTransformer threadSavedTransformerFromClass:NSStringTransformer.class withDateFormat:dateFormat];
     return [transformer transformedValue:self];
 }
 

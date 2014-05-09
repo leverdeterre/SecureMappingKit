@@ -13,21 +13,7 @@
 
 - (id)objectForKey:(id)aKey expectedClass:(Class)expectedClass
 {
-    Class transformerClass;
-    if(expectedClass == NSString.class) {
-        transformerClass = NSStringTransformer.class;
-    } else if (expectedClass == NSNumber.class) {
-        transformerClass = NSNumberTransformer.class;
-    } else if (expectedClass == NSArray.class) {
-        transformerClass = NSArrayTransformer.class;
-    } else if (expectedClass == NSURL.class) {
-        transformerClass = NSURLTransformer.class;
-    }  else if (expectedClass == NSDecimalNumber.class) {
-        transformerClass = NSDecimalNumberTransformer.class;
-    } else {
-        transformerClass = NSValueTransformer.class;
-    }
-    
+    Class transformerClass = [NSValueTransformer transformerClassForExpectedClass:expectedClass];
     return [self objectForKey:aKey expectedClass:expectedClass withTransformerClass:transformerClass];
 }
 
@@ -42,7 +28,7 @@
     if ([obj isKindOfClass:expectedClass]) {
         return obj;
     } else {
-        return [[NSValueTransformer transformerForClass:transformerClass] transformedValue:obj];
+        return [[NSValueTransformer threadSavedTransformerFromClass:transformerClass] transformedValue:obj];
     }
     
     return nil;
@@ -97,7 +83,7 @@
     }
     
     Class transformerClass = NSDateTransformer.class;
-    NSValueTransformer *transformer = [NSValueTransformer transformerForClass:transformerClass
+    NSValueTransformer *transformer = [NSValueTransformer threadSavedTransformerFromClass:transformerClass
                                                                withDateFormat:dateFormat];
     return [transformer transformedValue:obj];
 }

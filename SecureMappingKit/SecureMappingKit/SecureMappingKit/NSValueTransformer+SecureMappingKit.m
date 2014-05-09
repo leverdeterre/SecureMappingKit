@@ -7,12 +7,33 @@
 //
 
 #import "NSValueTransformer+SecureMappingKit.h"
-#import "NSDateTransformer.h"
 #import "NSDateFormatter+SecureMappingKit.h"
+#import "SecureMappingKitTransformers.h"
 
 @implementation NSValueTransformer (SecureMappingKit)
 
-+ (instancetype)transformerForClass:(Class)transformerClass
++ (Class)transformerClassForExpectedClass:(Class)expectedClass
+{
+    Class transformerClass = NSValueTransformer.class;
+    
+    if(expectedClass == NSString.class) {
+        transformerClass = NSStringTransformer.class;
+    } else if (expectedClass == NSNumber.class) {
+        transformerClass = NSNumberTransformer.class;
+    } else if (expectedClass == NSArray.class) {
+        transformerClass = NSArrayTransformer.class;
+    } else if (expectedClass == NSURL.class) {
+        transformerClass = NSURLTransformer.class;
+    } else if (expectedClass == NSDecimalNumber.class) {
+        transformerClass = NSDecimalNumberTransformer.class;
+    } else if (expectedClass == NSDate.class) {
+        transformerClass = NSDateTransformer.class;
+    }
+    
+    return transformerClass;
+}
+
++ (instancetype)threadSavedTransformerFromClass:(Class)transformerClass
 {
     NSDictionary *threadDict = [[NSThread currentThread] threadDictionary];
     NSValueTransformer *transformer = [threadDict objectForKey:NSStringFromClass(transformerClass)];
@@ -25,7 +46,7 @@
     return transformer;
 }
 
-+ (instancetype)transformerForClass:(Class)transformerClass withDateFormat:(NSString *)dateFormat
++ (instancetype)threadSavedTransformerFromClass:(Class)transformerClass withDateFormat:(NSString *)dateFormat
 {
     NSDictionary *threadDict = [[NSThread currentThread] threadDictionary];
     NSValueTransformer *transformer = [threadDict objectForKey:[NSString stringWithFormat:@"%@_%@",NSStringFromClass(transformerClass),dateFormat]];

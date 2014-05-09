@@ -10,7 +10,8 @@
 
 @interface NSValueTransformer (SecureMappingKit)
 
-+ (instancetype)transformerForClass:(Class)transformerClass;
-+ (instancetype)transformerForClass:(Class)transformerClass withDateFormat:(NSString *)dateFormat;
++ (Class)transformerClassForExpectedClass:(Class)expectedClass;
++ (instancetype)threadSavedTransformerFromClass:(Class)transformerClass;
++ (instancetype)threadSavedTransformerFromClass:(Class)transformerClass withDateFormat:(NSString *)dateFormat;
 
 @end

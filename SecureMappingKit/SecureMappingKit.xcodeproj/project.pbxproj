@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2209C57191D6E5700C4BA60 /* NSObject+SecureMappingKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C2209C56191D6E5700C4BA60 /* NSObject+SecureMappingKit.m */; };
 		C2C382F61916BF5B009FEDFA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C382F51916BF5B009FEDFA /* Foundation.framework */; };
 		C2C382F81916BF5B009FEDFA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C382F71916BF5B009FEDFA /* CoreGraphics.framework */; };
 		C2C382FA1916BF5B009FEDFA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C382F91916BF5B009FEDFA /* UIKit.framework */; };
@@ -58,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2209C55191D6E5700C4BA60 /* NSObject+SecureMappingKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SecureMappingKit.h"; sourceTree = "<group>"; };
+		C2209C56191D6E5700C4BA60 /* NSObject+SecureMappingKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SecureMappingKit.m"; sourceTree = "<group>"; };
+		C2209C58191D787F00C4BA60 /* SecureMappingKitTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecureMappingKitTransformers.h; sourceTree = "<group>"; };
 		C2C382F21916BF5B009FEDFA /* SecureMappingKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureMappingKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C382F51916BF5B009FEDFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C2C382F71916BF5B009FEDFA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,6 +239,8 @@
 				C2C38364191AE6DD009FEDFA /* NSDateFormatter+SecureMappingKit.m */,
 				C2C38373191B7D58009FEDFA /* NSDate+SecureMappingKit.h */,
 				C2C38374191B7D58009FEDFA /* NSDate+SecureMappingKit.m */,
+				C2209C55191D6E5700C4BA60 /* NSObject+SecureMappingKit.h */,
+				C2209C56191D6E5700C4BA60 /* NSObject+SecureMappingKit.m */,
 			);
 			name = SecureMappingKit;
 			path = SecureMappingKit/SecureMappingKit;
@@ -243,6 +249,7 @@
 		C2C383401916BFFC009FEDFA /* Transformers */ = {
 			isa = PBXGroup;
 			children = (
+				C2209C58191D787F00C4BA60 /* SecureMappingKitTransformers.h */,
 				C2C3832D1916BFAF009FEDFA /* NSBooleanNumberTransformer.h */,
 				C2C3832E1916BFAF009FEDFA /* NSBooleanNumberTransformer.m */,
 				C2C383311916BFAF009FEDFA /* NSNumberTransformer.h */,
@@ -373,6 +380,7 @@
 				C2C3833C1916BFAF009FEDFA /* NSNumberTransformer.m in Sources */,
 				C2C3837B191BFE8C009FEDFA /* SecureMappingKit.m in Sources */,
 				C2C3833F1916BFAF009FEDFA /* NSValueTransformer+SecureMappingKit.m in Sources */,
+				C2209C57191D6E5700C4BA60 /* NSObject+SecureMappingKit.m in Sources */,
 				C2C38378191B7FD1009FEDFA /* NSValueTransformerWithDateFormat.m in Sources */,
 				C2C383431916C04C009FEDFA /* JMOnePerson.m in Sources */,
 				C2C3833E1916BFAF009FEDFA /* NSURLTransformer.m in Sources */,
