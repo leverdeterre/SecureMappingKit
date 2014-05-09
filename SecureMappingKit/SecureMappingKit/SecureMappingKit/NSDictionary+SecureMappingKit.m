@@ -83,7 +83,7 @@
     return (NSArray *)[self objectForKey:aKey expectedClass:NSArrayTransformer.class];
 }
 
-- (NSDate *)dateForKey:(id)aKey withDateFormat:(NSString *)dateFormat
+- (NSDate *)dateForKey:(id)aKey usingDateFormat:(NSString *)dateFormat
 {
     id obj = [self objectForKey:aKey];
     if (aKey == nil) {

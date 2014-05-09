@@ -10,6 +10,6 @@
 
 @interface NSDate (SecureMappingKit)
 
-- (NSString *)stringWithDateFormat:(NSString *)dateFormat;
+- (NSString *)stringUsingDateFormat:(NSString *)dateFormat;
 
 @end

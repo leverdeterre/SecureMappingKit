@@ -23,7 +23,7 @@
     
     self.balanceDecimalNumber = [dict objectForKey:@"balance" expectedClass:NSDecimalNumber.class];
     
-    self.birthDate =  [dict dateForKey:@"birthDate" withDateFormat:@"MM/dd/yyyy"];
+    self.birthDate =  [dict dateForKey:@"birthDate" usingDateFormat:@"MM/dd/yyyy"];
 }
 
 @end

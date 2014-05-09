@@ -55,19 +55,12 @@ typedef id (^JMOTransformerBlock)(id value);
  */
 - (id)objectForKey:(id)aKey withTransformerBlock:(JMOTransformerBlock)transformerBlock;
 
-/*
- OPTIONS
-@interface NSDateFormatter (SecureMappingKit)
-+ (void)setForcedTimeZone:(NSTimeZone *)forcedTimeZone;
-+ (void)setForcedlocale:(NSLocale *)forcedLocale;
- */
-
 - (NSNumber *)numberForKey:(id)aKey;
 - (NSNumber *)boolNumberForKey:(id)aKey;
 - (NSDecimalNumber *)decimalNumberForKey:(id)aKey;
 - (NSString *)stringForKey:(id)aKey;
 - (NSURL *)urlForKey:(id)aKey;
 - (NSArray *)arrayForKey:(id)aKey;
-- (NSDate *)dateForKey:(id)aKey withDateFormat:(NSString *)dateFormat;
+- (NSDate *)dateForKey:(id)aKey usingDateFormat:(NSString *)dateFormat;
 
 @end

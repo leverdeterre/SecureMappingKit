@@ -12,7 +12,7 @@
 
 @implementation NSDate (SecureMappingKit)
 
-- (NSString *)stringWithDateFormat:(NSString *)dateFormat
+- (NSString *)stringUsingDateFormat:(NSString *)dateFormat
 {
     NSStringTransformer *transformer = [NSStringTransformer transformerForClass:NSStringTransformer.class withDateFormat:dateFormat];
     return [transformer transformedValue:self];
