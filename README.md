@@ -42,8 +42,9 @@ If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `p
 
 Configure optional values
 ```objective-c
-[NSDateFormatter setForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
-[NSDateFormatter setForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+[SecureMappingKit setDateFormatterForcedlocale:[NSLocale localeWithLocaleIdentifier:@"fr_FR"]];
+[SecureMappingKit setDateFormatterForcedTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"GMT"]];
+[SecureMappingKit setLogEnable:YES];
 ```
 
 ### On a NSDate
