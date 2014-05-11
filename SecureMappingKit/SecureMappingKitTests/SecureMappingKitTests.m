@@ -44,7 +44,7 @@
     [person decodeObjectWithDictionary:testDict];
     
     XCTAssertEqualObjects(person.identifier,@"12345", @"Should have matched");
-    XCTAssertEqual(person.isActive,TRUE, @"Should have matched");
+    XCTAssertEqualObjects(@(person.isActive),@(TRUE), @"Should have matched");
     
     NSDecimalNumber *d = [[NSDecimalNumber alloc] initWithDecimal:[@(1900.01f) decimalValue]];
     
