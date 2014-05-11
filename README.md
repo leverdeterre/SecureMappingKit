@@ -59,7 +59,7 @@ Configure optional values
 [NSDate dateFromObject:@"07/26/1982" usingDateFormat:@"MM/dd/yyyy"]
 ```
 
-##Using SecureMappingKit, implement SecureDecoding protocol
+###Using SecureMappingKit, implement SecureDecoding protocol
 
 ```objective-c
 - (void)decodeObjectWithDictionary:(NSDictionary *)dict
