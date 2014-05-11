@@ -35,12 +35,12 @@
     NSDictionary *testDict = @{@"birthDate": @"07/26/1982"};
     NSDate *date = [testDict dateForKey:@"birthDate" usingDateFormat:@"MM/dd/yyyy"];
     NSTimeInterval interval = [date timeIntervalSince1970];
-    XCTAssertEqual(interval, 396489600, @"Should have matched");
+    XCTAssertEqual(interval, 396489600.0, @"Should have matched");
     
     NSString *rollBackStringDate = [date stringUsingDateFormat:@"MM/dd/yyyy"];
     XCTAssertEqualObjects(rollBackStringDate, @"07/26/1982", @"Should have matched");
 
-    NSDate *dateWithInterval = [NSDate dateWithTimeIntervalSince1970:396489600];
+    NSDate *dateWithInterval = [NSDate dateWithTimeIntervalSince1970:396489600.0];
     XCTAssertEqualObjects(date, dateWithInterval, @"Should have matched");
 }
 
