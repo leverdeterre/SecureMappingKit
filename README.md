@@ -1,5 +1,12 @@
 SecureMappingKit 
 ==============================
+
+[![Twitter](https://img.shields.io/badge/contact-@leverdeterre-green.svg)](http://twitter.com/leverdeterre)
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/leverdeterre/SecureMappingKit/blob/master/LICENSE)
+[![Cocoapods](http://img.shields.io/cocoapods/v/SecureMappingKit.svg)](https://github.com/leverdeterre/SecureMappingKit)
+[![Travis](http://img.shields.io/travis/leverdeterre/SecureMappingKit.svg)](https://travis-ci.org/leverdeterre/SecureMappingKit)
+
+
 Securize your mapping between your JSON and your object.
 What is security ? The library is in charge of the convertion of the JSON objects to your desired types. 
 If your are expected a NSDate and the JSON gives you a NSString, SecureMappingKit transforms it into the exepected class, using NSValueTransformer.
@@ -21,7 +28,7 @@ Actual tranformers :
 
 ## Get SecureMappingKit (Soon)
 
-If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `pod 'SecureMappingKit', '~>0.0.1'`. 
+If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `pod 'SecureMappingKit', '~>0.0.1b1'`. 
 
 ##Using SecureMappingKit
 ### On a NSDictionnary
