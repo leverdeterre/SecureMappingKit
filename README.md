@@ -21,7 +21,7 @@ Actual tranformers :
 
 ## Get SecureMappingKit (Soon)
 
-If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `pod 'SecureMappingKit', '~>0.0.x'`. 
+If you use Cocoa Pods, you can get SecureMappingKit by adding to your podfile `pod 'SecureMappingKit', '~>0.0.1'`. 
 
 ##Using SecureMappingKit
 ### On a NSDictionnary
