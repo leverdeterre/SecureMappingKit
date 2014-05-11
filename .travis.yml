@@ -1,0 +1,8 @@
+before_install:
+  - brew update
+  - brew upgrade xctool
+
+language: objective-c
+xcode_project: SecureMappingKit/SecureMappingKit.xcodeproj # path to your xcodeproj folder
+xcode_scheme: SecureMappingKit
+xcode_sdk: iphonesimulator7.0
