@@ -10,4 +10,6 @@
 
 @interface NSDecimalNumberTransformer : NSValueTransformer
 
+@property (strong, nonatomic) NSDictionary *locale;
+
 @end

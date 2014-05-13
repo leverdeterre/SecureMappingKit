@@ -34,15 +34,20 @@
     }
     
     if ([value isKindOfClass:[NSString class]]) {
-        if ([value rangeOfString:@"."].location != NSNotFound) {
-            NSDictionary *dict = [NSDictionary dictionaryWithObject:@"." forKey:NSLocaleDecimalSeparator];
-            return [NSDecimalNumber decimalNumberWithString:value locale:dict];
-        } else if ([value rangeOfString:@","].location != NSNotFound) {
-            NSDictionary *dict = [NSDictionary dictionaryWithObject:@"," forKey:NSLocaleDecimalSeparator];
-            return [NSDecimalNumber decimalNumberWithString:value locale:dict];
-        } else {
-            return [NSDecimalNumber decimalNumberWithString:value];
+        NSString *stringVal = value;
+        NSMutableDictionary *dict = [NSMutableDictionary new];
+        if ([stringVal rangeOfString:@"."].location != NSNotFound) {
+            [dict setValue:@"." forKey:NSLocaleDecimalSeparator];
+        } else if ([stringVal rangeOfString:@","].location != NSNotFound) {
+            [dict setValue:@"," forKey:NSLocaleDecimalSeparator];
         }
+        
+        if ([stringVal rangeOfString:@" "].location != NSNotFound) {
+            stringVal = [stringVal stringByReplacingOccurrencesOfString:@" " withString:@""];
+            //[dict setValue:@" " forKey:NSLocaleGroupingSeparator];
+        }
+        self.locale = dict;
+        return [NSDecimalNumber decimalNumberWithString:stringVal locale:self.locale];
     }
     
     if ([value isKindOfClass:[NSNumber class]]) {
